@@ -1,0 +1,12 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./komponen/**/*.{js,ts,jsx,tsx}",
+    "./bagian/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
