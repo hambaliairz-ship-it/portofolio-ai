@@ -12,12 +12,12 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 overflow-hidden">
+    <section className="py-12 md:py-20 bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center pt-8 md:pt-0">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }}
               transition={{ duration: 0.5 }}
             >
