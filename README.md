@@ -1,34 +1,34 @@
-# Portofolio AI - Hambali Syamsuddin
+# AI Portfolio - Hambali Syamsuddin
 
-Portofolio web modern yang menampilkan keahlian dan proyek-proyek terbaru saya sebagai **AI-Assisted Fullstack Application Developer**. Proyek ini dibangun dengan teknologi web terkini dan menekankan pada integrasi kecerdasan buatan (AI) dalam alur kerja pengembangan.
+A modern web portfolio showcasing my skills and recent projects as an **AI-Assisted Fullstack Application Developer**. This project is built with the latest web technologies and emphasizes the integration of Artificial Intelligence (AI) in the development workflow.
 
-## 🚀 Teknologi Utama
+## 🚀 Key Technologies
 
-Proyek ini dibangun menggunakan stack teknologi berikut:
+This project is built using the following tech stack:
 
 - **Framework**: [Next.js](https://nextjs.org/) (React Framework)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Bahasa**: JavaScript / React
-- **Animasi**: [Framer Motion](https://www.framer.com/motion/)
+- **Language**: JavaScript / React
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: React Icons (Si & Fa)
 - **Deployment**: Vercel / Netlify
 
-## ✨ Fitur
+## ✨ Features
 
-- **Desain Responsif**: Tampilan yang optimal di semua perangkat (Desktop, Tablet, Mobile).
-- **Multi-Bahasa**: Dukungan Bahasa Indonesia (ID) dan Bahasa Inggris (EN).
-- **Mode Gelap/Terang**: Tema yang nyaman di mata dengan transisi halus.
-- **Integrasi WhatsApp**: Formulir kontak yang langsung terhubung ke WhatsApp.
-- **Showcase Proyek**: Galeri proyek dengan foto, deskripsi, dan tautan demo.
+- **Responsive Design**: Optimal display on all devices (Desktop, Tablet, Mobile).
+- **Multi-Language**: Support for Indonesian (ID) and English (EN).
+- **Dark/Light Mode**: Eye-comfortable themes with smooth transitions.
+- **WhatsApp Integration**: Contact form directly connected to WhatsApp.
+- **Project Showcase**: Project gallery with photos, descriptions, and demo links.
 
-## 🛠️ Instalasi & Menjalankan Lokal
+## 🛠️ Installation & Local Development
 
-Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer Anda:
+Follow these steps to run this project on your computer:
 
 1.  **Clone Repository**
     ```bash
-    git clone https://github.com/USERNAME-ANDA/NAMA-REPO.git
-    cd NAMA-REPO
+    git clone https://github.com/hambaliairz-ship-it/portofolio-ai.git
+    cd portofolio-ai
     ```
 
 2.  **Install Dependencies**
@@ -36,24 +36,24 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer Anda:
     npm install
     ```
 
-3.  **Jalankan Server Development**
+3.  **Run Development Server**
     ```bash
     npm run dev
     ```
-    Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-4.  **Build untuk Produksi**
+4.  **Build for Production**
     ```bash
     npm run build
     npm start
     ```
 
-## 👤 Penulis
+## 👤 Author
 
 **Hambali Syamsuddin**
 *   Role: AI-Assisted Fullstack Application Developer
 *   Email: hambaliairz@gmail.com
-*   Lokasi: Serang, Banten, Indonesia
+*   Location: Serang, Banten, Indonesia
 
 ---
 © 2026 Hambali Syamsuddin. All Rights Reserved.
