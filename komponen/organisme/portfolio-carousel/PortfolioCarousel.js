@@ -35,10 +35,9 @@ const PortfolioCarousel = ({ projects }) => {
             {/* Background decoration */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[500px] bg-linear-to-r from-blue-500/10 to-purple-500/10 rotate-12 blur-3xl rounded-full z-0 pointer-events-none" />
 
-            {/* Navigation Arrows */}
             <button
                 onClick={slideLeft}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-0 translate-x-4 group-hover/carousel:opacity-100 group-hover/carousel:translate-x-0 group-active/carousel:opacity-100 group-active/carousel:translate-x-0"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-100 translate-x-0 md:opacity-0 md:translate-x-4 md:group-hover/carousel:opacity-100 md:group-hover/carousel:translate-x-0"
                 aria-label="Previous project"
             >
                 <FaChevronLeft className="text-xl" />
@@ -46,7 +45,7 @@ const PortfolioCarousel = ({ projects }) => {
 
             <button
                 onClick={slideRight}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-0 -translate-x-4 group-hover/carousel:opacity-100 group-hover/carousel:translate-x-0 group-active/carousel:opacity-100 group-active/carousel:translate-x-0"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 md:group-hover/carousel:opacity-100 md:group-hover/carousel:translate-x-0"
                 aria-label="Next project"
             >
                 <FaChevronRight className="text-xl" />
@@ -83,8 +82,8 @@ const PortfolioCarousel = ({ projects }) => {
                                     }}
                                 />
 
-                                {/* Overlay Links */}
-                                <div className="absolute inset-0 z-20 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                                {/* Overlay Links - Desktop Only */}
+                                <div className="absolute inset-0 z-20 hidden md:flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                                     {project.demoUrl && (
                                         <a
                                             href={project.demoUrl}
@@ -121,7 +120,7 @@ const PortfolioCarousel = ({ projects }) => {
                                 </Text>
 
                                 {/* Tech Stack */}
-                                <div className="flex flex-wrap gap-2 mt-auto">
+                                <div className="flex flex-wrap gap-2 mt-auto mb-4">
                                     {project.techStack?.map((tech, idx) => (
                                         <span
                                             key={idx}
@@ -130,6 +129,30 @@ const PortfolioCarousel = ({ projects }) => {
                                             {tech}
                                         </span>
                                     ))}
+                                </div>
+
+                                {/* Mobile Actions - Visible below content on mobile */}
+                                <div className="flex gap-3 md:hidden mt-auto pt-4 border-t border-gray-100 dark:border-gray-700">
+                                    {project.demoUrl && (
+                                        <a
+                                            href={project.demoUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors flex-1 justify-center"
+                                        >
+                                            <FaExternalLinkAlt className="text-xs" /> Demo
+                                        </a>
+                                    )}
+                                    {project.sourceCodeUrl && (
+                                        <a
+                                            href={project.sourceCodeUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white text-sm font-medium rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors flex-1 justify-center"
+                                        >
+                                            <FaGithub className="text-xs" /> Code
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>
@@ -145,6 +168,7 @@ const PortfolioCarousel = ({ projects }) => {
             </div>
         </div>
     );
+
 };
 
 export default PortfolioCarousel;
