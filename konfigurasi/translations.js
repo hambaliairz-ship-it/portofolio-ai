@@ -28,7 +28,12 @@ export const translations = {
             title: "Proyek Terbaru",
             viewDemo: "Lihat Demo",
             sourceCode: "Kode Sumber",
+            scrollHint: "Geser atau gunakan panah untuk menjelajahi",
             items: [
+                {
+                    title: 'AI Scanner Barcode',
+                    description: 'Aplikasi pemindai cerdas yang menggunakan AI untuk mengidentifikasi produk dan memberikan informasi detail secara instan.'
+                },
                 {
                     title: 'Sistem Manajemen Gudang',
                     description: 'Aplikasi manajemen stok dan gudang yang efisien dengan pelacakan inventaris real-time.'
@@ -128,7 +133,12 @@ export const translations = {
             title: "Recent Projects",
             viewDemo: "View Demo",
             sourceCode: "Source Code",
+            scrollHint: "Drag or use arrows to explore items",
             items: [
+                {
+                    title: 'AI Barcode Scanner',
+                    description: 'Smart scanning application using AI to identify products and provide detailed information instantly.'
+                },
                 {
                     title: 'Warehouse Management System',
                     description: 'Efficient stock and warehouse management application with real-time inventory tracking.'

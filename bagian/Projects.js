@@ -1,6 +1,6 @@
 import React from 'react';
 import Text from '../komponen/atom/text/Text';
-import PortfolioGrid from '../komponen/organisme/portfolio-grid/PortfolioGrid';
+import PortfolioCarousel from '../komponen/organisme/portfolio-carousel/PortfolioCarousel';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -9,23 +9,29 @@ const Projects = () => {
 
   const projectsMeta = [
     {
+      techStack: ['next.js', 'vercel', 'neon', 'Tailwind CSS', 'typescript'],
+      demoUrl: 'https://rzvalor-barcode.vercel.app',
+      sourceCodeUrl: 'https://github.com/hambaliairz-ship-it/Barcode',
+      image: '/images/projects/rzvalor.png'
+    },
+    {
       techStack: ['React', 'Tailwind CSS', 'Netlify', 'Neon'],
       demoUrl: 'https://hambali-razzan.netlify.app/login',
-      sourceCodeUrl: 'https://share.google/2GfPWWVECaF4zjFnY',
+      sourceCodeUrl: 'https://github.com/hambali-joy-12/abi-stock-buddy',
       image: '/images/projects/GUDANG.png'
     },
     {
       techStack: ['Next.js', 'Netlify', 'Neon', 'Tailwind CSS'],
       demoUrl: 'https://restoran-nzan.netlify.app/',
-      sourceCodeUrl: 'https://share.google/2GfPWWVECaF4zjFnY',
+      sourceCodeUrl: 'https://github.com/hambaliairz-ship-it/Restoran-Rz',
       image: '/images/projects/restoran.png'
     },
     {
       techStack: ['HTML', 'CSS', 'vercel'],
       demoUrl: 'https://happy-birthday-weld-pi.vercel.app',
-      sourceCodeUrl: 'https://share.google/2GfPWWVECaF4zjFnY',
+      sourceCodeUrl: 'https://github.com/hambali-joy-12/happy_birthday',
       image: '/images/projects/birthday.png'
-    }
+    },
   ];
 
   // Merge translations with metadata
@@ -56,7 +62,7 @@ const Projects = () => {
           />
         </motion.div>
 
-        <PortfolioGrid projects={projects} />
+        <PortfolioCarousel projects={projects} />
       </div>
     </section>
   );
