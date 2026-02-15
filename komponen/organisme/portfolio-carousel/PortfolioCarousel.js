@@ -38,7 +38,7 @@ const PortfolioCarousel = ({ projects }) => {
             {/* Navigation Arrows */}
             <button
                 onClick={slideLeft}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-0 group-hover/carousel:opacity-100 translate-x-4 group-hover/carousel:translate-x-0"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-0 translate-x-4 group-hover/carousel:opacity-100 group-hover/carousel:translate-x-0 group-active/carousel:opacity-100 group-active/carousel:translate-x-0"
                 aria-label="Previous project"
             >
                 <FaChevronLeft className="text-xl" />
@@ -46,7 +46,7 @@ const PortfolioCarousel = ({ projects }) => {
 
             <button
                 onClick={slideRight}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-0 group-hover/carousel:opacity-100 -translate-x-4 group-hover/carousel:translate-x-0"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-0 -translate-x-4 group-hover/carousel:opacity-100 group-hover/carousel:translate-x-0 group-active/carousel:opacity-100 group-active/carousel:translate-x-0"
                 aria-label="Next project"
             >
                 <FaChevronRight className="text-xl" />
