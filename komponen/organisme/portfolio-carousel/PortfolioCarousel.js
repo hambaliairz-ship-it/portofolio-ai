@@ -37,7 +37,7 @@ const PortfolioCarousel = ({ projects }) => {
 
             <button
                 onClick={slideLeft}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-100 translate-x-0 md:opacity-0 md:translate-x-4 md:group-hover/carousel:opacity-100 md:group-hover/carousel:translate-x-0"
+                className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-0 translate-x-4 group-hover/carousel:opacity-100 group-hover/carousel:translate-x-0"
                 aria-label="Previous project"
             >
                 <FaChevronLeft className="text-xl" />
@@ -45,7 +45,7 @@ const PortfolioCarousel = ({ projects }) => {
 
             <button
                 onClick={slideRight}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 md:group-hover/carousel:opacity-100 md:group-hover/carousel:translate-x-0"
+                className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-lg text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 focus:outline-hidden opacity-0 -translate-x-4 group-hover/carousel:opacity-100 group-hover/carousel:translate-x-0"
                 aria-label="Next project"
             >
                 <FaChevronRight className="text-xl" />
@@ -160,8 +160,26 @@ const PortfolioCarousel = ({ projects }) => {
                 </motion.div>
             </motion.div>
 
+            {/* Mobile Navigation Controls (Bottom) */}
+            <div className="flex md:hidden justify-center items-center gap-6 mt-6 z-20 relative">
+                <button
+                    onClick={slideLeft}
+                    className="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-100 dark:border-gray-700 text-gray-800 dark:text-white active:scale-95 transition-transform"
+                    aria-label="Previous project"
+                >
+                    <FaChevronLeft className="text-lg" />
+                </button>
+                <button
+                    onClick={slideRight}
+                    className="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-100 dark:border-gray-700 text-gray-800 dark:text-white active:scale-95 transition-transform"
+                    aria-label="Next project"
+                >
+                    <FaChevronRight className="text-lg" />
+                </button>
+            </div>
+
             {/* Scroll Hint */}
-            <div className="flex justify-center mt-8 gap-2">
+            <div className="flex justify-center mt-6 gap-2">
                 <Text className="text-sm text-gray-400 italic">
                     {t.projects.scrollHint}
                 </Text>
